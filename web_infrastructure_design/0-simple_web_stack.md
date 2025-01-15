@@ -1,8 +1,15 @@
 ```mermaid
 flowchart TD;
-    A[User] --> B[DNS]
-    B --> C[Server]
-    C --> D[Nginx]
-    D --> E[Application Server]
-    E --> F[MySQL]
+    [User] → [DNS: www.foobar.com → 8.8.8.8] → [Server]
+                                           │
+                                           ├── [Nginx (Web Server)]
+                                           │       │
+                                           │       ├── Serves static files
+                                           │       └── Proxies to Application Server
+                                           │
+                                           ├── [Application Server]
+                                           │       └── Runs application code
+                                           │
+                                           └── [MySQL (Database)]
+                                                   └── Stores and retrieves data
 ```
