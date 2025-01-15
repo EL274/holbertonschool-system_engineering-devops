@@ -6,3 +6,4 @@ flowchart TD;
         WS --> AS[Application Server]
         AS --> DB[(Database: MySQL)]
     end
+```
