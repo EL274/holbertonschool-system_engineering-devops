@@ -1,6 +1,5 @@
 ```mermaid
 flowchart TD;
-   graph TD
     A[User] -->|1. Requests www.foobar.com| B[DNS Server]
     B -->|2. Resolves www.foobar.com to IP 8.8.8.8| C[Server: 8.8.8.8]
     C -->|3. Routes request to| D[Nginx: Web Server]
